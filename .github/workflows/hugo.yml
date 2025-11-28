@@ -1,45 +1,37 @@
-# Tên của quy trình làm việc (Workflow)
 name: Deploy Hugo site to GitHub Pages
 
-# Kích hoạt quy trình khi có commit được đẩy lên nhánh chính (main)
 on:
   push:
     branches:
-      - main  # Đảm bảo đây là tên nhánh chính của bạn
+      - main  
 
-# Thiết lập quyền truy cập cần thiết cho Actions
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-# Các công việc (Jobs)
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # Bước 1: Checkout mã nguồn
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true  # Quan trọng để tải theme
-          fetch-depth: 0    # Lấy toàn bộ lịch sử Git
+          submodules: true  
+          fetch-depth: 0  
 
-      # Bước 2: Thiết lập môi trường Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
 
-      # Bước 3: Xây dựng trang web Hugo
       - name: Build Hugo Site
         run: hugo --minify
 
-      # Bước 4: Triển khai lên GitHub Pages (Nhánh gh-pages)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages # Nhánh triển khai (đã thấy trong Repo mẫu)
-          publish_dir: ./public   # Thư mục Hugo build ra
+          publish_branch: gh-pages 
+          publish_dir: ./public   
