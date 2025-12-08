@@ -31,7 +31,7 @@ Trong suốt 12 tuần, tôi đã thực hiện các công việc chính như sa
 
 **Tuần 11:** [Hiểu quy trình CI/CD với AWS Code Series và trải nghiệm dịch vụ AI như Polly, Rekognition](1.11-week11/)  
 
-**Tuần 12:** [Tổng kết, làm quen với FCJ, thực hành EC2 cơ bản và quản lý tài nguyên AWS cơ bản](1.12-week12/)  
+**Tuần 12:** [Ôn tập Serverless & AI, thiết kế DynamoDB, tích hợp API, bảo mật và giám sát hệ thống](1.12-week12/)
 
 ---
 

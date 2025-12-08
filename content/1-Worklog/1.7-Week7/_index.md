@@ -1,52 +1,41 @@
 ---
-title: "Week 7 Worklog"
+title: "Worklog – Week 7"
 weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-### Week 7 Objectives:
+## Learning Objectives for Week 7
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Get familiar with the Serverless architecture using AWS Lambda and Amazon API Gateway.
+- Understand the working principles of Event-Driven systems on the AWS platform.
+- Learn how to build asynchronous processing systems using Amazon SQS and SNS.
+- Practice building APIs that connect Lambda with DynamoDB and S3 for data processing.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+## Weekly Implementation Details
 
-### Week 7 Achievements:
+| Day | Main Activities | Start Date | End Date | References |
+|-----|------------------|------------|----------|------------|
+| 2 | Study AWS Lambda: function concepts and permission management using IAM Roles; learn Amazon API Gateway including HTTP methods and CORS mechanism; practice creating IAM Roles for Lambda, building Lambda functions for file upload processing, configuring API Gateway to trigger Lambda, and storing data in DynamoDB | 11/08/2025 | 11/08/2025 | |
+| 3 | Practice integrating Lambda with S3 and DynamoDB: building image processing Lambda functions, creating S3 Buckets, configuring IAM Policies for Lambda, creating and managing DynamoDB tables, building data-write Lambda functions, and cleaning up resources | 12/08/2025 | 12/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | Practice deploying a static website with S3: creating buckets, enabling static hosting, attaching bucket policies, and uploading frontend files; building a CRUD system with DynamoDB and Lambda, configuring API Gateway, testing APIs using Postman and frontend, and cleaning up resources | 14/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | Learn Event-Driven architecture with Amazon SQS and SNS: publish/subscribe model and message queue principles; practice creating SQS Queues and SNS Topics, building Lambda and APIs to interact with SQS and SNS, and testing system operations | 15/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | Learn AWS Step Functions and their role in orchestrating microservices in Serverless systems | 15/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+## Summary of Achievements in Week 7
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+During the seventh week, I focused on studying and practicing Serverless and Event-Driven architecture models on the AWS platform. First, I explored how AWS Lambda works, gaining an understanding of how serverless functions are deployed without the need to manage servers, as well as the role of IAM Roles in granting resource access to Lambda functions based on the principle of least privilege.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+At the same time, I learned about Amazon API Gateway, including how to build RESTful APIs, use HTTP methods, and configure CORS to allow secure access from frontend applications. Through hands-on practice, I successfully built a system where API Gateway acted as the entry point, triggering Lambda functions to process requests and store data in DynamoDB.
 
-* Used AWS CLI to perform basic operations such as:
+Next, I practiced integrating Lambda with Amazon S3 and DynamoDB. I built Lambda functions to handle file uploads to S3 while storing metadata in DynamoDB. Through this workflow, I gained a clearer understanding of how to build a complete serverless backend system with three core components: API Gateway – Lambda – DynamoDB.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+In addition, I successfully deployed a static website using Amazon S3, where the frontend interacted with backend APIs via API Gateway to perform create, read, update, and delete (CRUD) operations on data. Testing through Postman and directly on the web interface helped me better understand real-world request processing flows.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+Alongside Serverless architecture, I continued learning the Event-Driven model using Amazon SQS and SNS. I created SQS Queues and SNS Topics, built Lambda functions to process messages from queues, and practiced publish/subscribe mechanisms to simulate asynchronous processing systems. This helped me understand the role of message queues in decoupling system components, improving reliability, and enhancing scalability.
+
+Toward the end of the week, I gained an overview of AWS Step Functions and their capability to orchestrate Lambda functions within microservices systems according to logical execution flows. Through this week’s learning activities, I established a solid foundation in Serverless and Event-Driven architectures, as well as modern backend system development on AWS with scalability, cost efficiency, and maintainability.

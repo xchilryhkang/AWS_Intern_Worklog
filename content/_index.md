@@ -7,17 +7,17 @@ chapter: false
 # **Internship Report**
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Quoc Bao
+&emsp; **Full Name:** Trang Hoang Khang
 
-&emsp; **Phone Number:** 0969197845
+&emsp; **Phone Number:** 0837525888
 
-&emsp; **Email:** baonqse181700@fpt.edu.vn
+&emsp; **Email:** khangthse182228@fpt.edu.vn
 
 &emsp; **University:** FPT University
 
 &emsp; **Major:** Artificial Intelligence
 
-&emsp; **Student ID:** SE181700
+&emsp; **Student ID:** SE182228
 
 &emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 

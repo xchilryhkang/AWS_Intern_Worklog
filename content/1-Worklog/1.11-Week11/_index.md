@@ -1,52 +1,50 @@
 ---
-title: "Week 11 Worklog"
+title: "Worklog – Week 11"
 weight: 2
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-### Week 11 Objectives:
+## Objectives of Week 11
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Understand the **CI/CD workflow** and AWS tools supporting it.  
+- Explore and gain hands-on experience with **Amazon pre-trained AI services**.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+## Weekly Implementation Details
 
-### Week 11 Achievements:
+| Day | Activities | Start Date | End Date | References |
+|-----|------------|------------|----------|-----------|
+| 2 | Participate in event: Generative AI with Amazon Bedrock <br>&emsp; + Update knowledge on Foundation Models on Amazon Bedrock <br>&emsp; + Learn more about pre-trained AI services | 11/08/2025 | 11/08/2025 | |
+| 3 | Learn AWS CI/CD services: <br>&emsp; + AWS CodeCommit <br>&emsp; + AWS CodeBuild <br>&emsp; + AWS CodeDeploy <br>&emsp; + AWS CodePipeline | 12/08/2025 | 12/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | Learn and practice **AWS Elastic Beanstalk**: <br>&emsp; + Application & Environment setup <br>&emsp; + Create CloudFormation Stack <br>&emsp; + Connect EC2 instances and configure database <br>&emsp; + Deploy and update applications on Elastic Beanstalk <br>&emsp; + Monitor environment status and query EC2 server information <br>&emsp; + Clean up resources | 13/08/2025 | 13/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | **Amazon Polly Practice**: <br>&emsp; + Configure DynamoDB <br>&emsp; + Explore Text-to-Speech (TTS) features <br>&emsp; + Generate speech and speech marks using CLI and Java SDK | 14/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | **Amazon Rekognition Practice**: <br>&emsp; + Create Cognito Identity Pool <br>&emsp; + Detect objects and recognize faces <br>&emsp; + Test “find a person” application <br>&emsp; + Attach EBS volumes to EC2 | 15/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+## Summary of Achievements in Week 11
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+This week focused on **CI/CD deployment, Elastic Beanstalk, and hands-on experience with AWS AI services**, with the following highlights:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### **AWS CI/CD**
+- Understood automated software development processes using **CodeCommit, CodeBuild, CodeDeploy, and CodePipeline**.  
+- Learned how to manage source code, build, test, and deploy applications automatically.
 
-* Used AWS CLI to perform basic operations such as:
+### **AWS Elastic Beanstalk**
+- Deployed web applications quickly on a managed environment.  
+- Created and updated stacks using CloudFormation, connected EC2 instances and databases.  
+- Monitored environment health and queried server information.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### **Amazon AI Services**
+- **Amazon Polly**: Convert text to speech, generate speech marks, integrate with DynamoDB.  
+- **Amazon Rekognition**: Detect objects, recognize faces, and test “find a person” application.  
+- Configured Cognito Identity Pool to manage user access permissions.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### **Additional Skills**
+- Managed IAM Roles & Policies to grant proper permissions for services.  
+- Used both Console and CLI for managing, testing, and cleaning up AWS resources.  
+- Learned to combine CI/CD, compute, and AI services to deploy end-to-end applications.
+
+Through Week 11, I developed the ability to **deploy web applications using CI/CD, explore pre-trained AI services, and manage the full pipeline from code to deployment**, while also practicing monitoring and securing AWS resources.

@@ -1,136 +1,141 @@
 ---
-title: "Proposal"
+title: "APT Magic – Proposal"
+date: "2025-10-28"
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
 
-# FoodMind Recommender Platform For Prompt-IPoG
-## An integrated AWS Serverless solution for personalized meal tracking and recommendations. 
+# APT Magic  
+## A Serverless AI Platform for Personalized Image Generation and Social Interaction
 
-### 1. Executive Summary  
-**FoodMind Recommender Platform** is an intelligent web platform designed to serve as a personalized eating assistant. It automatically calculates the user's Total Daily Energy Expenditure (TDEE) based on their profile and leverages **AWS Bedrock (Generative AI)** to allow users to log meals in natural language (e.g., “I just ate a bowl of beef pho”).  
-The system also provides intelligent meal recommendations (Breakfast/Lunch/Dinner) by automatically **filtering** dishes according to calorie goals and health constraints (e.g., “allergies”, “gout”).  
+### 1. Executive Summary
+**APT Magic** is a serverless AI-powered web application designed to enable users to generate, personalize, and share artistic content such as AI-generated images. The platform integrates with AI foundation models via **Amazon Bedrock** and provides a seamless web experience using **Next.js (SSR)** hosted on **AWS Amplify**.  
 
-The entire solution is built on a **serverless architecture** with AWS Amplify (Frontend), API Gateway, AWS Lambda, and Amazon DynamoDB (Backend). It enables users to receive meal recommendations based on their calculated calorie intake for the day. Data is stored and queried through Amazon DynamoDB, ensuring high performance and flexible scalability.  
+The MVP version focuses on real-time image generation and sharing, while the **Future Design** aims to scale with **SageMaker Inference**, **Step Functions**, and **AWS MLOps pipelines** for advanced model orchestration and automation.
 
-The solution emphasizes the combination of AI and real-world data to support smart meal decision-making and offers a **dashboard** for users to track their eating habits effectively.  
+APT Magic is currently developed as a modern, cost-efficient, and secure AWS-native architecture for small to medium user bases, with planned expansion into enterprise-grade AI orchestration.
 
-### 2. Problem Statement  
-**Current Problem**  
-Many users struggle to manage their daily diet — they don’t know how many calories to consume or which foods suit their daily health goals. Manual logging and nutritional lookup are time-consuming, inaccurate, and not personalized.  
+---
 
-**Solution**  
-FoodMind Recommender Platform applies **AI and AWS Cloud** to automate the entire meal tracking and recommendation process:  
+### 2. Problem Statement
+#### What’s the Problem?
+Most AI image generation platforms are costly, rely on opaque third-party APIs, and offer limited personalization.  
+Developers and creators often face high latency, lack of transparent model management, and limited control over user data security.
 
-**Goal Automation:** Automatically calculates calorie targets (using the Mifflin-St Jeor formula) when users update their profiles.  
+#### The Solution
+APT Magic leverages **AWS serverless architecture** to deliver:
+- Real-time AI image generation through **Amazon Bedrock Stability AI** models.  
+- Secure user authentication and content management using **Amazon Cognito** and **DynamoDB**.  
+- Scalable API handling via **AWS Lambda** and **API Gateway**.  
+- Low-latency global delivery with **CloudFront CDN** and **WAF protection**.  
 
-**Recommendation Automation:** Provides a `GET /recommendations` API using **Lambda business logic** to filter dishes from the database based on calorie targets (e.g., lunch < 700 calories) and health restrictions (e.g., avoid “red meat” for gout).  
+Future upgrades will include **Step Functions orchestration**, **SQS/SNS decoupling**, **SageMaker Inference pipelines**, and cost-efficient CI/CD via **CodeBuild**, **CodePipeline**, and **CloudFormation**. transforming APT Magic into a fully automated MLOps platform.
 
-**AI Logging Automation:** Provides a `POST /log-food` API using **AWS Bedrock** to parse natural language input, extract calories, and store logs.  
+---
 
-**Self-learning Automation:** When users log a new dish (e.g., “bun dau mam tom”) unknown to the system, **AWS Bedrock** estimates its calories and automatically adds it to the knowledge base.  
+### 3. Solution Architecture
 
-**Visual Tracking:** The **dashboard (Amplify)** displays a 7-day meal history, helping users monitor and manage their dietary habits.  
+#### **MVP Architecture**
+The MVP is a **fully serverless architecture**, focusing on scalability, maintainability, and cost-effectiveness.
 
-Users simply input data — the system understands, analyzes, and recommends suitable meals tailored to personal health goals.  
+**Core AWS Services:**
+- **Route53 + CloudFront + WAF** — Secure global access and caching.
+- **Amplify (Next.js SSR)** — Hosts the frontend and server-side rendering layer.
+- **API Gateway + Lambda Functions** — Manage backend logic (image processing, subscription, post APIs).
+- **Amazon Cognito** — User authentication and access control.
+- **Amazon S3 + DynamoDB** — Data persistence and image storage.
+- **Amazon Bedrock** — Integrates foundation model (Stability AI) for image generation.
+- **Secrets Manager, CloudWatch, CloudTrail** — Security, logging, and monitoring.
 
-**Benefits and ROI**  
-- Saves time on nutrition tracking, eliminates manual work.  
-- Offers highly personalized AI experience.  
-- Creates a structured dataset for AI research in food and nutrition.  
-- Low cost thanks to serverless architecture.  
-- Scalable and reusable for other health-related applications.  
-- ROI estimate: payback within 6 months through reduced development time and model reuse.  
-- Estimated cost: around **10–15 USD/month**.  
+**Security**
+- **PrivateLink** for secure communication between Lambda and backend services.  
+- **WAF + IAM policies** for traffic filtering and role-based access control.  
 
-### 3. Solution Architecture  
-The platform is fully built on **AI-as-a-Service** combined with **AWS Serverless**, ensuring high performance, security, and scalability. Nutritional data on dishes is stored in **Amazon DynamoDB**, which supports generating meal recommendations based on calculated calorie targets. **Amazon Bedrock** processes user natural language to extract calorie information and log meals in DynamoDB. **AWS Amplify** hosts the Next.js web interface, and **Amazon Cognito** ensures secure user authentication. The architecture is detailed below:
+![APT Magic MVP Architecture](/images/system_architecture.png)
 
-![FoodMind Recommender Platform Architecture](/images/2-Proposal/ArchitectureFoodMind.png)
+---
 
-**AWS Services Used**
+#### **Future Design (Enhanced Architecture)**
+In the next phase, APT Magic will evolve into an **AI orchestration platform**, introducing new layers for automation, resilience, and model lifecycle management.
 
-- **AWS Amplify:** Deploys and hosts the web interface (Next.js), integrates with GitLab CI/CD for auto build and deploy.  
-- **Amazon Route 53 + AWS WAF + Amazon CloudFront:** Edge layer for secure and fast content delivery worldwide.  
-- **Amazon Cognito:** Manages user authentication, login, and access control.  
-- **Amazon API Gateway:** Provides endpoints for `GET /Recommendation`, `POST /Log`, `GET /Dashboard`, connected to Lambda.  
-- **AWS Lambda (Private Subnet):** Handles business logic, calls Bedrock and DynamoDB via VPC Endpoints for security.  
-- **AWS Bedrock:** Generates dish descriptions, normalizes meal logs, and stores them in DynamoDB for personalized recommendations.  
-- **Amazon DynamoDB:** Stores user data, meal logs, calorie goals, and recommendation data with scalable performance.  
-- **AWS Secrets Manager:** Secures credentials (API Keys, Bedrock access) for Lambda and backend.  
-- **Amazon CloudWatch & AWS CloudTrail:** Monitors logs, access, and performance; supports incident recovery.  
-- **Amazon S3:** Stores system logs and backups.  
-- **AWS IAM:** Manages detailed access permissions between services and users.  
-- **Amazon VPC:** Isolates Lambda in a private subnet to ensure secure internal communication between Lambda, DynamoDB, and Bedrock.  
+**New Services to be Added:**
+- **AWS Step Functions** — To orchestrate asynchronous workflows such as:
+  - Multi-step AI image generation (prompt validation → inference → result upload).
+  - Payment confirmation → model processing → notification.
+- **Amazon SQS** — For reliable message queuing between async Lambda tasks.
+- **Amazon SNS** — For real-time event notifications to users or administrators.
+- **Amazon ElastiCache (Redis)** — For rate limiting and caching of frequent inference requests.
+- **Amazon SageMaker Inference** — For hosting custom fine-tuned models and managing model endpoints.
+- **AWS CodePipeline + SageMaker Pipelines** — To automate MLOps: model training, evaluation, and deployment.
+- **AWS PrivateLink + VPC Endpoints** — For secure data flow between Lambda, S3, and SageMaker.
+- **AWS WAF & Shield Advanced** — For DDoS protection and advanced security filtering.
 
-**Component Design**  
+- **CI/CD + MLOps**
+  - **CodePipeline + CodeBuild + CloudFormation** for infrastructure deployment and automation.  
 
-- **User Management:** Amazon Cognito controls user access.  
-- **Content Delivery & Security:** Route 53 routes domain, WAF prevents web attacks (SQL Injection, DDoS), CloudFront speeds up global delivery.  
-- **Web Interface:** Amplify hosts the Next.js app.  
-- **Meal Logging & Recommendation:** User input (text) stored in DynamoDB; Lambda recommends dishes based on calorie calculations.  
-- **Meal Analysis:** Lambda calls Bedrock to process user input, extract calorie data, and log new dishes in DynamoDB if missing.  
-- **Dashboard Display:** Amplify shows calorie charts by day/week/month.  
-- **Authentication & Security:** Cognito ensures secure login and user management.  
-- **Monitoring & Tracking:** CloudWatch monitors logs and Lambda performance; CloudTrail records API and user activity history.  
+![APT Magic Future Architecture](/images/aptMagic_future.png)
 
-### 4. Technical Implementation  
-**Implementation Phases**  
-- **Research & Design:** Build AI + Cloud pipeline, check feasibility, and design AWS architecture (Weeks 1–5).  
-- **Cost Optimization:** Validate AWS service pricing to optimize budget (Week 6).  
-- **Development & Deployment:** Load initial data, build Next.js frontend, test APIs, and deploy final product (Weeks 7–11).  
+---
 
-**Technical Requirements**  
-- *Calorie Dataset:* Collect initial data and load into DynamoDB using AWS SDK (Boto3).  
-- *Recommendation Platform:* Requires knowledge of AWS Amplify (Next.js hosting), S3, Cognito, and Serverless stack (Lambda, DynamoDB, API Gateway), DynamoDB schema (PK, SK), and Bedrock API integration.  
+### 4. Technical Implementation
 
-### 5. Roadmap & Milestones  
-- **Internship (Jan–Mar):**  
-  - **January:** Learn and master AWS services.  
-  - **February:** Design and refine architecture.  
-  - **March:** Deploy, test, and launch the system.  
-- **Post-deployment:** Maintain, enhance recommendations, and expand data within one year.  
+#### **Implementation Phases**
+**Phase 1 – MVP Deployment (Completed / Current)**
+- Implement Amplify (Next.js SSR) + API Gateway + Lambda.
+- Integrate Bedrock Stability AI API.
+- Deploy CI/CD via CodePipeline + CloudFormation.
+- Enable user authentication (Cognito) and storage (S3 + DynamoDB).
 
-### 6. Budget Estimation  
-Cost reference: [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Or download [budget estimation file](../attachments/budget_estimation.pdf).  
+**Phase 2 – Future Design Expansion**
+- Introduce Step Functions + SQS/SNS to manage async AI workflows.
+- Add ElastiCache for request throttling and caching.
+- Integrate SageMaker Inference for fine-tuned model hosting.
+- Implement SageMaker Pipelines for automated training and deployment.
+- Extend security with Shield Advanced + GuardDuty + PrivateLink.
+- Connect GitLab Runner with CodeBuild for unified CI/CD.
 
-**Infrastructure Cost**
+---
 
-- **AWS Amplify:** 0.50 USD/month (~100 MB, low traffic).  
-- **AWS Lambda:** 0.20–0.30 USD/month (100,000 requests/month, avg runtime <1s).  
-- **Amazon API Gateway:** 0.10–0.20 USD/month (50,000 REST API requests/month).  
-- **Amazon DynamoDB (Paid Plan):** ~0.30 USD/month (50 MB data, ~20,000 requests/month, On-Demand).  
-- **Amazon S3 (log/backup):** 0.10 USD/month (<2GB).  
-- **AWS Bedrock:** 3.00–5.00 USD/month (a few thousand tokens/month).  
-- **CloudWatch + CloudTrail + IAM:** ~0.10 USD/month.  
-- **Amazon Cognito:** 0.00 USD/month (<50 active users, Free Tier).  
+### 5. Timeline & Milestones
 
-**Total:** ~4–6 USD/month (~50–75 USD/year).  
+---
 
-### 7. Risk Assessment  
-**Risk Matrix**  
-- AI misinterpretation — High impact, Low probability.  
-- API overload — Medium impact, Low probability.  
-- Budget overrun — Medium impact, Low probability.  
-- Logic error — Medium impact, Low probability.  
+### 6. Budget Estimation (AWS Pricing Estimate)
+| Service | Estimated Monthly Cost | Notes |
+|----------|------------------------|-------|
+| Lambda + API Gateway | $0.50 | < 1M invocations |
+| Amplify (Next.js SSR) | $0.35 | Web hosting and build minutes |
+| S3 + DynamoDB | $0.20 | Image and metadata storage |
+| Bedrock Inference | $3.00 | Based on model usage (Stability AI) |
+| ElastiCache (Future) | $1.00 | Rate limit cache |
+| Step Functions + SQS/SNS | $0.60 | Workflow orchestration |
+| SageMaker Inference (Future) | $5.00 | Managed endpoint cost |
+| CloudWatch + WAF + Shield | $1.00 | Logging and protection |
+| **Total (Est.)** | **~$11.65/month** | Scalable by usage |
 
-**Mitigation Strategies**  
-- AI deviation: Careful prompt engineering.  
-- API overload: Request throttling via API Gateway.  
-- Budget: AWS budget alerts and service optimization.  
-- Logic: Rigorous Lambda testing and validation.  
+---
 
-**Contingency Plan**  
-- Manual data collection fallback if AWS outage occurs.  
-- Use CloudFormation to restore infrastructure configurations.  
+### 7. Risk Assessment
+| Risk | Impact | Probability | Mitigation |
+|------|---------|-------------|-------------|
+| AI model inference latency | Medium | High | Use ElastiCache + Step Functions for async handling |
+| Cost increase from model calls | High | Medium | Bedrock usage control, SageMaker autoscaling |
+| CI/CD misconfigurations | Medium | Low | CloudFormation rollback policies |
+| Security vulnerabilities | High | Medium | WAF, GuardDuty, PrivateLink, IAM least privilege |
+| Third-party API dependency | Medium | Medium | Bedrock fallback to S3-stored inference results |
 
-### 8. Expected Outcomes  
-**Enhanced User Experience:** Provides a smart meal assistant, removing manual effort in tracking and choosing meals.  
+---
 
-**Practical AI Integration:** Demonstrates real-world AWS Bedrock integration in production-level systems.  
+### 8. Expected Outcomes
+#### Technical Outcomes:
+- Complete serverless AI image generation workflow with secure CI/CD.
+- Modular orchestration enabling rapid MLOps integration.
+- Improved latency and reliability via caching and async workflows.
 
-**Nutrition Data Foundation:** Expandable dataset for AI and healthcare research.  
+#### Long-Term Value:
+- A foundation for **AI as a Service (AIaaS)** platform expansion.  
+- Ready-to-scale **MLOps framework** with automated retraining.  
+- Reusable cloud infrastructure for future AI products.
 
-**Scalability:** Extendable to image-based food analysis, AI chat coaching, and mobile applications.  
+---

@@ -1,52 +1,58 @@
 ---
-title: "Week 9 Worklog"
+title: "Worklog – Week 9"
 weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-### Week 9 Objectives:
+## Objectives of Week 9
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Get familiar with the data ecosystem and Machine Learning (ML) services on AWS.  
+- Understand AWS AI/ML services and learn how to deploy data analysis pipelines.  
+- Learn to use pre-built AI services for data processing, recognition, analysis, and prediction.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+## Weekly Implementation Details
 
-### Week 9 Achievements:
+| Day | Activities | Start Date | End Date | References |
+|-----|------------|------------|----------|------------|
+| 2 | Learn AWS Glue (Crawler), Amazon Athena, Amazon QuickSight, Amazon SageMaker | 11/08/2025 | 11/08/2025 | |
+| 3 | **Data Analysis Practice:** create IAM Role & Policy, set up S3 Bucket, deploy Glue Crawler, create notebooks in Glue Studio, analyze data with Athena, visualize with QuickSight, clean up resources | 12/08/2025 | 12/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | **SageMaker Practice:** create SageMaker Studio, prepare dataset, analyze and export data to S3, train and tune ML models, deploy and evaluate performance, perform automated hyperparameter tuning, clean up resources | 13/08/2025 | 13/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | Learn Amazon Bedrock: Foundation Models, Bedrock Agents, Knowledge Bases, Bedrock Inference Features | 14/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | Explore Pre-trained AI Services: Rekognition, Translate, Textract, Transcribe, Polly, Comprehend, Kendra, Lookout, Personalize | 15/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+## Summary of Achievements in Week 9
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+This week focused on the **AWS data ecosystem and Machine Learning**, combining both theoretical learning and hands-on practice with pre-built AI services:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### **AWS Glue, Athena, and QuickSight**
+- Understood how Glue Crawler automatically discovers and catalogs data from S3.  
+- Used Athena to query S3 data directly using SQL.  
+- Visualized data with QuickSight, creating dynamic reports and dashboards.
 
-* Used AWS CLI to perform basic operations such as:
+### **Amazon SageMaker**
+- Created and used SageMaker Studio to prepare datasets, train, and tune ML models.  
+- Learned the workflow from raw data to model training, evaluation, and exporting results.  
+- Practiced deploying models and testing performance, including automated hyperparameter tuning.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### **Amazon Bedrock and Pre-trained AI Services**
+- Learned to use Foundation Models, Bedrock Agents, and Knowledge Bases.  
+- Understood Bedrock inference features for rapid AI deployment.  
+- Explored pre-built AI services:  
+  - **Rekognition**: image and video recognition.  
+  - **Translate & Transcribe**: translation and speech-to-text.  
+  - **Textract & Comprehend**: data extraction and language analysis.  
+  - **Polly**: text-to-speech synthesis.  
+  - **Kendra & Lookout**: information search and anomaly detection.  
+  - **Personalize**: personalized recommendation systems.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### **Additional Skills**
+- Managed IAM Roles, Policies, and access rights for secure ML data handling.  
+- Connected data across S3, Glue, SageMaker, and QuickSight to build complete data pipelines.  
+- Cleaned up resources after practice sessions to optimize costs.
+
+Through Week 9, I gained the ability to **deploy data and ML pipelines on AWS**, understand how to integrate services for analysis, visualization, and ML model deployment, and become familiar with pre-built AI services to accelerate intelligent application development.

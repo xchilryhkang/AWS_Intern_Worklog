@@ -1,52 +1,53 @@
 ---
-title: "Week 8 Worklog"
+title: "Worklog – Week 8"
 weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-### Week 8 Objectives:
+## Objectives of Week 8
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Understand and implement automated AWS resource provisioning using CloudFormation and AWS CDK.
+- Manage system configurations and monitor sessions using AWS Systems Manager.
+- Learn how to connect infrastructure components (EC2, Lambda, API Gateway, S3) using the Infrastructure as Code (IaC) approach.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+## Weekly Implementation Details
 
-### Week 8 Achievements:
+| Day | Activities | Start Date | End Date | References |
+|-----|------------|------------|----------|------------|
+| 2 | Learn AWS CloudFormation and Cloud9: template structure in JSON/YAML, Stack concept, and Drift Detection; **Practice**: create a basic CloudFormation template using Cloud9 | 11/08/2025 | 11/08/2025 | |
+| 3 | **Advanced CloudFormation Practice**: deploy Lambda functions, create Stacks, connect EC2 resources, map resources using StackSets, perform Drift Detection checks, and clean up resources | 15/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | Learn AWS Systems Manager (SSM): Patch Manager, Run Command, Session Manager; **Practice**: create EC2 instances, attach IAM Roles, configure Patch Manager and Run Command, monitor sessions, and clean up resources | 12/08/2025 | 12/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | Learn AWS CDK with VS Code: deploy public EC2, configure development environment, create ECS cluster and application, API Gateway + Load Balancer, Lambda, and S3; deploy Stack and Nested Stack, and clean up resources | 14/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | **Session Manager Practice**: create private and public EC2 instances, attach IAM Roles, connect from public to private instances, update IAM Roles for S3 access, create S3 buckets and S3 Gateway Endpoints, monitor session logs, configure Port Forwarding, and clean up resources | 13/08/2025 | 13/08/2025 | https://cloudjourney.awsstudygroup.com/ |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+## Summary of Achievements in Week 8
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+During this week, I focused on studying and practicing **Infrastructure as Code (IaC)** solutions and system configuration management:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### **AWS CloudFormation & AWS CDK**
+- Gained a solid understanding of how to create, deploy, and manage Stacks, Nested Stacks, and StackSets.
+- Practiced building JSON/YAML templates to automatically provision Lambda, EC2, S3, and API Gateway resources.
+- Applied CloudFormation Drift Detection to identify differences between templates and actual deployed resources.
+- Used AWS CDK with VS Code to deploy infrastructure in a more flexible, maintainable, and scalable manner.
 
-* Used AWS CLI to perform basic operations such as:
+### **AWS Systems Manager (SSM)**
+- Managed EC2 instances remotely using Session Manager without direct SSH access.
+- Configured Patch Manager and Run Command to automate system updates and EC2 operations.
+- Monitored session logs and used Port Forwarding to securely access private EC2 instances.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### **Automated Infrastructure Management**
+- Connected infrastructure components (Lambda, API Gateway, EC2, S3) using the IaC architecture.
+- Understood safe workflows for deploying, updating, and deleting resources.
+- Practiced cleaning up resources after labs to optimize costs and avoid unnecessary charges.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### **Additional Skills**
+- Became familiar with Cloud9 for developing and editing CloudFormation and CDK templates.
+- Understood the principles of monitoring and managing private/public EC2 sessions.
+- Gained hands-on experience in deploying Serverless and containerized backend systems using API Gateway and Load Balancer.
+
+Through the activities in Week 8, I significantly strengthened my skills in **automating AWS infrastructure**, system management, and monitoring, providing a strong foundation for deploying more complex cloud environments in subsequent weeks.

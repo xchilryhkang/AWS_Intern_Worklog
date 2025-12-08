@@ -1,52 +1,54 @@
 ---
-title: "Week 10 Worklog"
+title: "Worklog – Week 10"
 weight: 2
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-### Week 10 Objectives:
+## Objectives of Week 10
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Understand and implement system monitoring using **Amazon CloudWatch**.  
+- Learn how AWS **CloudTrail** records API activities and manages logs in real time.  
+- Monitor serverless applications and frontend/backend systems with **AWS Amplify**.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+## Weekly Implementation Details
 
-### Week 10 Achievements:
+| Day | Activities | Start Date | End Date | References |
+|-----|------------|------------|----------|------------|
+| 2 | Learn Amazon CloudWatch: Metrics, Logs, Alarms, Events, Dashboards, AWS X-Ray | 11/08/2025 | 11/08/2025 | |
+| 3 | **CloudWatch Practice:** create IAM Role & Policy, configure EC2, set up CloudWatch Metrics & Logs, create Alarms, build Dashboards, clean up resources | 12/08/2025 | 12/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | Learn AWS CloudTrail: Trails, Events (Read/Write/All), CloudTrail Insights | 13/08/2025 | 13/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | Learn AWS Amplify: Frontend, Backend, Storage, Authentication | 14/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | **Practice:** Monitor Lambda with CloudWatch & X-Ray, host source code on Amplify, create custom metrics and Alarms, debug logs, monitor with X-Ray, clean up resources | 15/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+## Summary of Achievements in Week 10
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+This week focused on **system monitoring and activity management on AWS**, combining hands-on practice with CloudWatch, CloudTrail, and Amplify:
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### **Amazon CloudWatch**
+- Learned to use **Metrics** to monitor resources such as EC2, Lambda, and DynamoDB.  
+- Configured **Logs** for detailed tracking of application and infrastructure activities.  
+- Created **Alarms** to notify when thresholds are breached or issues occur.  
+- Designed **Dashboards** for an overview of AWS resources.  
+- Utilized **X-Ray** for debugging and performance analysis of Lambda functions and API Gateway.
 
-* Used AWS CLI to perform basic operations such as:
+### **AWS CloudTrail**
+- Learned how to record all API calls and monitor Read/Write events.  
+- Used CloudTrail Insights to detect unusual activities within the system.  
+- Integrated with CloudWatch to generate alerts and automate responses for critical events.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### **AWS Amplify**
+- Quickly hosted frontend and backend applications.  
+- Implemented authentication and storage to integrate with Lambda and DynamoDB.  
+- Monitored application performance via CloudWatch Logs and X-Ray.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+### **Additional Skills**
+- Managed IAM Roles & Policies for proper security and access control.  
+- Combined CLI and Console for simultaneous management of multiple AWS resources.  
+- Planned and executed resource cleanup after practice to optimize costs.
+
+Through Week 10, I developed the ability to **monitor AWS systems in real-time, debug serverless applications, create alerts and dashboards**, and efficiently manage frontend/backend resources using Amplify.
