@@ -12,24 +12,24 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>APT Magic – Proposal :: Internship Report</title>
+    <title>Proposal :: Internship Report</title>
 
     
-    <link href="../css/nucleus.css?1765280878" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1765280878" rel="stylesheet">
-    <link href="../css/hybrid.css?1765280878" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1765280878" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1765280878" rel="stylesheet">
-    <link href="../css/auto-complete.css?1765280878" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1765280878" rel="stylesheet">
-    <link href="../css/theme.css?1765280878" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1765280878" rel="stylesheet">
+    <link href="../css/nucleus.css?1765298754" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1765298754" rel="stylesheet">
+    <link href="../css/hybrid.css?1765298754" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1765298754" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1765298754" rel="stylesheet">
+    <link href="../css/auto-complete.css?1765298754" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1765298754" rel="stylesheet">
+    <link href="../css/theme.css?1765298754" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1765298754" rel="stylesheet">
     
-    <link href="../css/theme-workshop.css?1765280878" rel="stylesheet">
+    <link href="../css/theme-workshop.css?1765298754" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1765280878"></script>
+    <script src="../js/jquery-3.3.1.min.js?1765298754"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -88,14 +88,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1765280878"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1765280878"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1765298754"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1765298754"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/xchilryhkang.github.io\/AWS_Intern_Worklog\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1765280878"></script>
+<script type="text/javascript" src="../js/search.js?1765298754"></script>
  
   </div>
 
@@ -341,7 +341,7 @@
            
 <li
   data-nav-id="/2-proposal/"
-  title="APT Magic – Proposal"
+  title="Proposal"
   class="dd-item 
         
         active
@@ -349,7 +349,7 @@
         "
 >
   <a href="../2-proposal/">
-     <b> 2. </b> APT Magic – Proposal 
+     <b> 2. </b> Proposal 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -950,7 +950,7 @@
             
           
           
-            <a href='../'>Internship Report</a> > APT Magic – Proposal
+            <a href='../'>Internship Report</a> > Proposal
           
         
           
@@ -969,7 +969,7 @@
         <li><a href="#3-solution-architecture">3. Solution Architecture</a></li>
         <li><a href="#4-technical-implementation">4. Technical Implementation</a></li>
         <li><a href="#5-timeline--milestones">5. Timeline &amp; Milestones</a></li>
-        <li><a href="#6-budget-estimation-aws-pricing-estimate">6. Budget Estimation (AWS Pricing Estimate)</a></li>
+        <li><a href="#6-cost-estimate-aws-pricing-estimate">6. Cost Estimate (AWS Pricing Estimate)</a></li>
         <li><a href="#7-risk-assessment">7. Risk Assessment</a></li>
         <li><a href="#8-expected-outcomes">8. Expected Outcomes</a></li>
       </ul>
@@ -990,7 +990,7 @@
           
             <h1>
               
-              APT Magic – Proposal
+              Proposal
             </h1>
           
 
@@ -1037,7 +1037,7 @@ Developers and creators often face high latency, lack of transparent model manag
 <li><strong>PrivateLink</strong> for secure communication between Lambda and backend services.</li>
 <li><strong>WAF + IAM policies</strong> for traffic filtering and role-based access control.</li>
 </ul>
-<p><img src="../images/system_architecture.png" alt="APT Magic MVP Architecture"></p>
+<p><img src="../images/2-Proposal/system_architecture.png" alt="APT Magic MVP Architecture"></p>
 <hr>
 <h4 id="future-design-enhanced-architecture"><strong>Future Design (Enhanced Architecture)</strong></h4>
 <p>In the next phase, APT Magic will evolve into an <strong>AI orchestration platform</strong>, introducing new layers for automation, resilience, and model lifecycle management.</p>
@@ -1100,61 +1100,249 @@ Developers and creators often face high latency, lack of transparent model manag
 </ul>
 <hr>
 <h3 id="5-timeline--milestones">5. Timeline &amp; Milestones</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Phase</th>
+          <th>Description</th>
+          <th>Estimated Duration</th>
+          <th>Deployment Milestone</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Month 1: Setup &amp; Core API</strong></td>
+          <td>Deploy infrastructure (IaC), Cognito, API Gateway, DynamoDB, and foundational Lambda functions.</td>
+          <td>4 Weeks</td>
+          <td>Core Backend operational, Auth/User Management completed.</td>
+      </tr>
+      <tr>
+          <td><strong>Month 2: AI &amp; Payment Integration</strong></td>
+          <td>Integrate Claude Haiku 3 LLM on Amazon Bedrock (Stability AI), Replicate API, complete <em>Image Processing</em> functions, and integrate third-party payment gateway.</td>
+          <td>4 Weeks</td>
+          <td>Successful end-to-end AI image processing demo.</td>
+      </tr>
+      <tr>
+          <td><strong>Month 3: Front-end &amp; CI/CD</strong></td>
+          <td>Develop UI/UX (Amplify/Next.js), finalize CI/CD pipelines, and configure Monitoring/Security (CloudWatch/WAF).</td>
+          <td>4 Weeks</td>
+          <td>Full platform ready for user testing.</td>
+      </tr>
+      <tr>
+          <td><strong>Month 4: Optimization &amp; Go-Live</strong></td>
+          <td>Perform performance testing (Stress Test), cost optimization, and Production deployment.</td>
+          <td>4 Weeks</td>
+          <td><strong>Go-Live</strong> (Official product launch).</td>
+      </tr>
+  </tbody>
+</table>
 <hr>
-<h3 id="6-budget-estimation-aws-pricing-estimate">6. Budget Estimation (AWS Pricing Estimate)</h3>
+<h3 id="6-cost-estimate-aws-pricing-estimate">6. Cost Estimate (AWS Pricing Estimate)</h3>
+<h4 id="total-cost">Total Cost</h4>
+<ul>
+<li><strong>Monthly:</strong> $9.80</li>
+<li><strong>Upfront:</strong> $0.00</li>
+<li><strong>12 Months:</strong> $117.60</li>
+</ul>
+<hr>
+<h4 id="service-overview">Service Overview</h4>
 <table>
   <thead>
       <tr>
           <th>Service</th>
-          <th>Estimated Monthly Cost</th>
+          <th>Region</th>
+          <th>Monthly Cost</th>
+          <th>Upfront</th>
+          <th>12-Month Cost</th>
           <th>Notes</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Lambda + API Gateway</td>
+          <td>Amazon Route 53</td>
+          <td>Asia Pacific (Singapore)</td>
           <td>$0.50</td>
-          <td>&lt; 1M invocations</td>
+          <td>$0.00</td>
+          <td>$6.00</td>
+          <td>1 Hosted Zone, 1 domain, 1 linked VPC</td>
       </tr>
       <tr>
-          <td>Amplify (Next.js SSR)</td>
-          <td>$0.35</td>
-          <td>Web hosting and build minutes</td>
+          <td>Amazon CloudFront</td>
+          <td>Asia Pacific (Singapore)</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+          <td>No specific configuration</td>
       </tr>
       <tr>
-          <td>S3 + DynamoDB</td>
-          <td>$0.20</td>
-          <td>Image and metadata storage</td>
+          <td>AWS WAF</td>
+          <td>Asia Pacific (Singapore)</td>
+          <td>$6.00</td>
+          <td>$0.00</td>
+          <td>$72.00</td>
+          <td>1 Web ACL; 1 rule per ACL</td>
       </tr>
       <tr>
-          <td>Bedrock Inference</td>
-          <td>$3.00</td>
-          <td>Based on model usage (Stability AI)</td>
+          <td>AWS Amplify</td>
+          <td>Asia Pacific (Singapore)</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+          <td>Build instance: Standard (8GB/4vCPU); request duration 500ms</td>
       </tr>
       <tr>
-          <td>ElastiCache (Future)</td>
-          <td>$1.00</td>
-          <td>Rate limit cache</td>
+          <td>AWS CloudFormation</td>
+          <td>Asia Pacific (Singapore)</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+          <td>$0.00</td>
+          <td>No extensions; no operations</td>
       </tr>
       <tr>
-          <td>Step Functions + SQS/SNS</td>
-          <td>$0.60</td>
-          <td>Workflow orchestration</td>
+          <td>Amazon API Gateway</td>
+          <td>Asia Pacific (Singapore)</td>
+          <td>$0.13</td>
+          <td>$0.00</td>
+          <td>$1.59</td>
+          <td>10k requests/month; WebSocket message 1KB; request size 30KB</td>
       </tr>
       <tr>
-          <td>SageMaker Inference (Future)</td>
-          <td>$5.00</td>
-          <td>Managed endpoint cost</td>
+          <td>AWS Lambda</td>
+          <td>Asia Pacific (Singapore)</td>
+          <td>$1.67</td>
+          <td>$0.00</td>
+          <td>$20.04</td>
+          <td>1 million invokes; x86; 512MB ephemeral storage</td>
       </tr>
       <tr>
-          <td>CloudWatch + WAF + Shield</td>
-          <td>$1.00</td>
-          <td>Logging and protection</td>
+          <td>Amazon CloudWatch</td>
+          <td>Asia Pacific (Singapore)</td>
+          <td>$0.85</td>
+          <td>$0.00</td>
+          <td>$10.22</td>
+          <td>1 metric; 0.5GB logs in; 0.5GB logs to S3</td>
       </tr>
       <tr>
-          <td><strong>Total (Est.)</strong></td>
-          <td><strong>~$11.65/month</strong></td>
-          <td>Scalable by usage</td>
+          <td>S3 Standard</td>
+          <td>Asia Pacific (Singapore)</td>
+          <td>$0.23</td>
+          <td>$0.00</td>
+          <td>$2.76</td>
+          <td>10GB storage; 20k PUT; 40k GET</td>
+      </tr>
+      <tr>
+          <td>DynamoDB On-Demand</td>
+          <td>Asia Pacific (Singapore)</td>
+          <td>$0.42</td>
+          <td>$0.00</td>
+          <td>$5.04</td>
+          <td>1GB storage; 1KB item; on-demand mode</td>
+      </tr>
+      <tr>
+          <td><strong>Total (Estimate)</strong></td>
+          <td>—</td>
+          <td><strong>$9.80</strong></td>
+          <td><strong>$0.00</strong></td>
+          <td><strong>$117.60</strong></td>
+          <td>Based on AWS Pricing Calculator</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h4 id="metadata">Metadata</h4>
+<ul>
+<li><strong>Currency:</strong> USD</li>
+<li><strong>Locale:</strong> en_US</li>
+<li><strong>Created On:</strong> 12/9/2025</li>
+<li><strong>Share URL:</strong> <a href="https://calculator.aws/#/estimate?id=f8f785603d5dea16be2d60ad39e4733fc352a108">AWS Calculator Link</a></li>
+<li><strong>Legal Disclaimer:</strong> AWS Pricing Calculator provides estimates only; actual costs may vary based on usage.</li>
+</ul>
+<hr>
+<h4 id="ai-model-pricing">AI Model Pricing</h4>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Resolution / Token Usage</th>
+          <th>Quality</th>
+          <th>Price per Request (USD)</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Titan Image Generator v2</td>
+          <td>&lt; 512×512</td>
+          <td>Standard</td>
+          <td>0.008</td>
+          <td>Fixed price per 1 image</td>
+      </tr>
+      <tr>
+          <td>Titan Image Generator v2</td>
+          <td>&lt; 512×512</td>
+          <td>Premium</td>
+          <td>0.01</td>
+          <td>Fixed price per 1 image</td>
+      </tr>
+      <tr>
+          <td>Titan Image Generator v2</td>
+          <td>&gt; 1024×1024</td>
+          <td>Standard</td>
+          <td>0.01</td>
+          <td>Fixed price per 1 image</td>
+      </tr>
+      <tr>
+          <td>Titan Image Generator v2</td>
+          <td>&gt; 1024×1024</td>
+          <td>Premium</td>
+          <td>0.012</td>
+          <td>Fixed price per 1 image</td>
+      </tr>
+      <tr>
+          <td>Stable Diffusion 3.5 Large</td>
+          <td>Any</td>
+          <td>N/A</td>
+          <td>0.08</td>
+          <td>Fixed price per 1 image</td>
+      </tr>
+      <tr>
+          <td>Claude (text + image)</td>
+          <td>40 input tokens + 1 image</td>
+          <td>N/A</td>
+          <td>0.00195</td>
+          <td>Price for 1 request including text and 1 image 1024×1024</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="additional-options">Additional Options</h4>
+<table>
+  <thead>
+      <tr>
+          <th>Mode</th>
+          <th>Augmentation</th>
+          <th>Price (USD)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>text→img</td>
+          <td>no augment</td>
+          <td>0.08</td>
+      </tr>
+      <tr>
+          <td>text→img</td>
+          <td>with augment</td>
+          <td>0.08195</td>
+      </tr>
+      <tr>
+          <td>img→img</td>
+          <td>no augment</td>
+          <td>0.012</td>
+      </tr>
+      <tr>
+          <td>img→img</td>
+          <td>with augment</td>
+          <td>0.094</td>
       </tr>
   </tbody>
 </table>
@@ -1901,19 +2089,19 @@ Developers and creators often face high latency, lack of transparent model manag
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1765280878"></script>
-    <script src="../js/perfect-scrollbar.min.js?1765280878"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1765280878"></script>
-    <script src="../js/jquery.sticky.js?1765280878"></script>
-    <script src="../js/featherlight.min.js?1765280878"></script>
-    <script src="../js/highlight.pack.js?1765280878"></script>
+    <script src="../js/clipboard.min.js?1765298754"></script>
+    <script src="../js/perfect-scrollbar.min.js?1765298754"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1765298754"></script>
+    <script src="../js/jquery.sticky.js?1765298754"></script>
+    <script src="../js/featherlight.min.js?1765298754"></script>
+    <script src="../js/highlight.pack.js?1765298754"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1765280878"></script>
-    <script src="../js/learn.js?1765280878"></script>
-    <script src="../js/hugo-learn.js?1765280878"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1765298754"></script>
+    <script src="../js/learn.js?1765298754"></script>
+    <script src="../js/hugo-learn.js?1765298754"></script>
 
-    <link href="../mermaid/mermaid.css?1765280878" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1765280878"></script>
+    <link href="../mermaid/mermaid.css?1765298754" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1765298754"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/</loc>
-    <lastmod>2025-10-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -267,19 +266,6 @@
                 href="https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/1-worklog/1.9-week9/"
                 />
   </url><url>
-    <loc>https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/2-proposal/</loc>
-    <lastmod>2025-10-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://xchilryhkang.github.io/AWS_Intern_Worklog/2-proposal/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/2-proposal/"
-                />
-  </url><url>
     <loc>https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/5-workshop/5.2-prerequiste/</loc>
     <xhtml:link
                 rel="alternate"
@@ -290,6 +276,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/5-workshop/5.2-prerequiste/"
+                />
+  </url><url>
+    <loc>https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/2-proposal/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://xchilryhkang.github.io/AWS_Intern_Worklog/2-proposal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/2-proposal/"
                 />
   </url><url>
     <loc>https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/1-worklog/1.10-week10/</loc>

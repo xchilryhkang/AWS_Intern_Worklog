@@ -1,6 +1,5 @@
 ---
-title: "APT Magic – Proposal"
-date: "2025-10-28"
+title: "Proposal"
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
@@ -52,7 +51,7 @@ The MVP is a **fully serverless architecture**, focusing on scalability, maintai
 - **PrivateLink** for secure communication between Lambda and backend services.  
 - **WAF + IAM policies** for traffic filtering and role-based access control.  
 
-![APT Magic MVP Architecture](/images/system_architecture.png)
+![APT Magic MVP Architecture](/images/2-Proposal/system_architecture.png)
 
 ---
 
@@ -99,20 +98,71 @@ In the next phase, APT Magic will evolve into an **AI orchestration platform**, 
 
 ### 5. Timeline & Milestones
 
+| Phase | Description | Estimated Duration | Deployment Milestone |
+|-------|-------------|--------------------|-----------------------|
+| **Month 1: Setup & Core API** | Deploy infrastructure (IaC), Cognito, API Gateway, DynamoDB, and foundational Lambda functions. | 4 Weeks | Core Backend operational, Auth/User Management completed. |
+| **Month 2: AI & Payment Integration** | Integrate Claude Haiku 3 LLM on Amazon Bedrock (Stability AI), Replicate API, complete *Image Processing* functions, and integrate third-party payment gateway. | 4 Weeks | Successful end-to-end AI image processing demo. |
+| **Month 3: Front-end & CI/CD** | Develop UI/UX (Amplify/Next.js), finalize CI/CD pipelines, and configure Monitoring/Security (CloudWatch/WAF). | 4 Weeks | Full platform ready for user testing. |
+| **Month 4: Optimization & Go-Live** | Perform performance testing (Stress Test), cost optimization, and Production deployment. | 4 Weeks | **Go-Live** (Official product launch). |
+
+
 ---
 
-### 6. Budget Estimation (AWS Pricing Estimate)
-| Service | Estimated Monthly Cost | Notes |
-|----------|------------------------|-------|
-| Lambda + API Gateway | $0.50 | < 1M invocations |
-| Amplify (Next.js SSR) | $0.35 | Web hosting and build minutes |
-| S3 + DynamoDB | $0.20 | Image and metadata storage |
-| Bedrock Inference | $3.00 | Based on model usage (Stability AI) |
-| ElastiCache (Future) | $1.00 | Rate limit cache |
-| Step Functions + SQS/SNS | $0.60 | Workflow orchestration |
-| SageMaker Inference (Future) | $5.00 | Managed endpoint cost |
-| CloudWatch + WAF + Shield | $1.00 | Logging and protection |
-| **Total (Est.)** | **~$11.65/month** | Scalable by usage |
+### 6. Cost Estimate (AWS Pricing Estimate)
+
+#### Total Cost
+- **Monthly:** $9.80  
+- **Upfront:** $0.00  
+- **12 Months:** $117.60  
+
+---
+
+#### Service Overview
+
+| Service | Region | Monthly Cost | Upfront | 12-Month Cost | Notes |
+|--------|---------|--------------|---------|---------------|-------|
+| Amazon Route 53 | Asia Pacific (Singapore) | $0.50 | $0.00 | $6.00 | 1 Hosted Zone, 1 domain, 1 linked VPC |
+| Amazon CloudFront | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | No specific configuration |
+| AWS WAF | Asia Pacific (Singapore) | $6.00 | $0.00 | $72.00 | 1 Web ACL; 1 rule per ACL |
+| AWS Amplify | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | Build instance: Standard (8GB/4vCPU); request duration 500ms |
+| AWS CloudFormation | Asia Pacific (Singapore) | $0.00 | $0.00 | $0.00 | No extensions; no operations |
+| Amazon API Gateway | Asia Pacific (Singapore) | $0.13 | $0.00 | $1.59 | 10k requests/month; WebSocket message 1KB; request size 30KB |
+| AWS Lambda | Asia Pacific (Singapore) | $1.67 | $0.00 | $20.04 | 1 million invokes; x86; 512MB ephemeral storage |
+| Amazon CloudWatch | Asia Pacific (Singapore) | $0.85 | $0.00 | $10.22 | 1 metric; 0.5GB logs in; 0.5GB logs to S3 |
+| S3 Standard | Asia Pacific (Singapore) | $0.23 | $0.00 | $2.76 | 10GB storage; 20k PUT; 40k GET |
+| DynamoDB On-Demand | Asia Pacific (Singapore) | $0.42 | $0.00 | $5.04 | 1GB storage; 1KB item; on-demand mode |
+| **Total (Estimate)** | — | **$9.80** | **$0.00** | **$117.60** | Based on AWS Pricing Calculator |
+
+---
+
+#### Metadata
+- **Currency:** USD  
+- **Locale:** en_US  
+- **Created On:** 12/9/2025  
+- **Share URL:** [AWS Calculator Link](https://calculator.aws/#/estimate?id=f8f785603d5dea16be2d60ad39e4733fc352a108)  
+- **Legal Disclaimer:** AWS Pricing Calculator provides estimates only; actual costs may vary based on usage.
+
+---
+
+#### AI Model Pricing
+
+| Model | Resolution / Token Usage | Quality | Price per Request (USD) | Notes |
+|-------|-------------------------|---------|------------------------|-------|
+| Titan Image Generator v2 | < 512×512 | Standard | 0.008 | Fixed price per 1 image |
+| Titan Image Generator v2 | < 512×512 | Premium | 0.01 | Fixed price per 1 image |
+| Titan Image Generator v2 | > 1024×1024 | Standard | 0.01 | Fixed price per 1 image |
+| Titan Image Generator v2 | > 1024×1024 | Premium | 0.012 | Fixed price per 1 image |
+| Stable Diffusion 3.5 Large | Any | N/A | 0.08 | Fixed price per 1 image |
+| Claude (text + image) | 40 input tokens + 1 image | N/A | 0.00195 | Price for 1 request including text and 1 image 1024×1024 |
+
+#### Additional Options
+
+| Mode | Augmentation | Price (USD) |
+|------|-------------|-------------|
+| text→img | no augment | 0.08 |
+| text→img | with augment | 0.08195 |
+| img→img | no augment | 0.012 |
+| img→img | with augment | 0.094 |
 
 ---
 
@@ -139,3 +189,5 @@ In the next phase, APT Magic will evolve into an **AI orchestration platform**, 
 - Reusable cloud infrastructure for future AI products.
 
 ---
+
+
