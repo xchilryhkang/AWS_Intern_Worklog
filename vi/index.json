@@ -74,7 +74,7 @@
 	"title": "Giới thiệu",
 	"tags": [],
 	"description": "",
-	"content": "Giới thiệu về WorkShop Workshop này hướng dẫn từng bước thiết lập IAM, AWS CLI, UV, Groq API, triển khai mã nguồn RAG tích hợp Groq LLM vào AWS AgentCore và cuối cùng là publish API qua AWS Gateway. Mục tiêu WorkShop \u0026ldquo;Cách gọi api\u0026rdquo; hiểu cách gọi api bên ngoài Aws Agent Core \u0026ldquo;Chunking\u0026rdquo; cách chunking chia dữ liệu cho Rag có thể lấy ra được một cách tối ưu \u0026ldquo;Thêm bộ nhớ cho Rag\u0026rdquo; tìm hiểu cách mà Agent Rag có thể nhớ được từng dữ liệu khi tương tác với người đùng \u0026ldquo;Deploy Aws Agent Core\u0026rdquo; tim hiểu cách mà triển khai được Aws Agent Core \u0026ldquo;Triển khai API\u0026rdquo; cách gọi Agent Core thông qua API ![overview](ảnh kiến trúc mô hìn) "
+	"content": "Giới thiệu về WorkShop Workshop này hướng dẫn từng bước thiết lập IAM, AWS CLI, UV, Groq API, triển khai mã nguồn RAG tích hợp Groq LLM vào AWS AgentCore và cuối cùng là publish API qua AWS Gateway. Mục tiêu WorkShop \u0026ldquo;Cách gọi api\u0026rdquo; hiểu cách gọi api bên ngoài Aws Agent Core \u0026ldquo;Chunking\u0026rdquo; cách chunking chia dữ liệu cho Rag có thể lấy ra được một cách tối ưu \u0026ldquo;Thêm bộ nhớ cho Rag\u0026rdquo; tìm hiểu cách mà Agent Rag có thể nhớ được từng dữ liệu khi tương tác với người đùng \u0026ldquo;Deploy Aws Agent Core\u0026rdquo; tim hiểu cách mà triển khai được Aws Agent Core \u0026ldquo;Triển khai API\u0026rdquo; cách gọi Agent Core thông qua API "
 },
 {
 	"uri": "https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/5-workshop/5.4-agent-core-run/5.4.2-call-agentcore/",
@@ -243,6 +243,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Tổng quan Trong phần này, bạn sẽ học cách triển khai và gọi AWS Agent Core từ máy local Tại sao nên sử dụng AWS CLI: AWS CLI có thể giúp bạn truy cập và cấu hình set up được Agent Core từ máy của mình, linh hoạt và tiện lợi "
+},
+{
+	"uri": "https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/5-workshop/5.5-clean/",
+	"title": "Dọn Dẹp",
+	"tags": [],
+	"description": "",
+	"content": "Overview Trong phần này, chúng ta sẽ xoá những gì đã khởi tạo trong workshop lần này\nXóa một Agent trong AgentCore Runtime Truy cập vào Amazon Bedrock AgentCore trên AWS Console. Trong menu bên trái, chọn Build → Runtime. Tại danh sách Runtime resources, bạn sẽ thấy các agent đã tạo, ví dụ: agent_demo_2 hoặc agent_with_memory. Chọn agent bạn muốn xóa bằng cách tick vào radio button ở cột Name. Nhấn nút Delete ở góc phải. Xác nhận thao tác xóa khi AWS yêu cầu. Agent sẽ bị xóa vĩnh viễn khỏi danh sách Runtime resources. Xóa một Memory trong AgentCore Sau khi xóa agent trong Runtime, bạn có thể quản lý hoặc xóa Memory mà agent đó sử dụng:\nTrong menu bên trái, chọn Build → Memory. Tại danh sách các Memory resources, chọn memory bạn muốn xóa. Nhấn nút Delete ở góc phải. Xác nhận thao tác xóa khi AWS yêu cầu. Memory sẽ bị xóa khỏi hệ thống. "
 },
 {
 	"uri": "https://xchilryhkang.github.io/AWS_Intern_Worklog/vi/5-workshop/",

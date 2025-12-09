@@ -81,7 +81,7 @@
 	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "Introduction to the Workshop This workshop provides a step-by-step guide to setting up IAM, AWS CLI, UV, Groq API, deploying RAG source code integrated with Groq LLM into AWS AgentCore, and finally publishing the API through AWS Gateway. Workshop Objectives \u0026ldquo;How to call APIs\u0026rdquo; — understand how to call external APIs outside AWS AgentCore. \u0026ldquo;Chunking\u0026rdquo; — learn how to split data for RAG so it can retrieve information optimally. \u0026ldquo;Adding memory to RAG\u0026rdquo; — explore how the RAG Agent can remember each piece of data during interactions with users. \u0026ldquo;Deploy AWS AgentCore\u0026rdquo; — understand how to deploy AWS AgentCore. \u0026ldquo;Publish API\u0026rdquo; — learn how to call AgentCore through an API. ![overview](ảnh kiến trúc mô hìn)\n"
+	"content": "Introduction to the Workshop This workshop provides a step-by-step guide to setting up IAM, AWS CLI, UV, Groq API, deploying RAG source code integrated with Groq LLM into AWS AgentCore, and finally publishing the API through AWS Gateway. Workshop Objectives \u0026ldquo;How to call APIs\u0026rdquo; — understand how to call external APIs outside AWS AgentCore. \u0026ldquo;Chunking\u0026rdquo; — learn how to split data for RAG so it can retrieve information optimally. \u0026ldquo;Adding memory to RAG\u0026rdquo; — explore how the RAG Agent can remember each piece of data during interactions with users. \u0026ldquo;Deploy AWS AgentCore\u0026rdquo; — understand how to deploy AWS AgentCore. \u0026ldquo;Publish API\u0026rdquo; — learn how to call AgentCore through an API. "
 },
 {
 	"uri": "https://xchilryhkang.github.io/AWS_Intern_Worklog/1-worklog/",
@@ -243,6 +243,13 @@
 	"tags": [],
 	"description": "",
 	"content": "During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.\nEvent 1 Event Name: Cloud Day\nDate \u0026amp; Time: 9:00, September 18, 2025\nLocation: 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City\nRole: Attendee\nEvent 2 Event Name: Generative AI with Amazon Bedrock\nDate \u0026amp; Time: 08:30, August 13, 2025\nLocation: 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City\nRole: Attendee\n"
+},
+{
+	"uri": "https://xchilryhkang.github.io/AWS_Intern_Worklog/5-workshop/5.5-clean/",
+	"title": "Clean up",
+	"tags": [],
+	"description": "",
+	"content": "\u0026ndash;\nOverview In this section, we will remove everything that was created during this workshop.\nDeleting an Agent in AgentCore Runtime Go to Amazon Bedrock AgentCore in the AWS Console. In the left-hand menu, select Build → Runtime. In the Runtime resources list, you will see the agents you have created, for example: agent_demo_2 or agent_with_memory. Select the agent you want to delete by ticking the radio button in the Name column. Click the Delete button at the top right. Confirm the deletion when AWS prompts you. The agent will be permanently removed from the Runtime resources list. Deleting a Memory in AgentCore After deleting an agent in Runtime, you can manage or delete the Memory that the agent used:\nIn the left-hand menu, select Build → Memory. In the Memory resources list, select the memory you want to delete. Click the Delete button at the top right. Confirm the deletion when AWS prompts you. The memory will be removed from the system. "
 },
 {
 	"uri": "https://xchilryhkang.github.io/AWS_Intern_Worklog/5-workshop/",
